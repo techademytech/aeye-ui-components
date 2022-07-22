@@ -1,0 +1,61 @@
+$sizes: 20;
+
+@mixin margin-classes {
+  @for $size from 0 through $sizes {
+    $margin: $size * 0.25rem;
+    .m#{$size} {
+      margin: $margin;
+    }
+    .ml#{$size} {
+      margin-left: $margin;
+    }
+    .mr#{$size} {
+      margin-right: $margin;
+    }
+    .mt#{$size} {
+      margin-top: $margin;
+    }
+    .mb#{$size} {
+      margin-bottom: $margin;
+    }
+    .mx#{$size} {
+      margin-left: $margin;
+      margin-right: $margin;
+    }
+    .my#{$size} {
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }
+  }
+}
+@include margin-classes;
+
+@mixin padding-classes {
+  @for $size from 0 through $sizes {
+    $padding: $size * 0.25rem;
+    .p#{$size} {
+      padding: $padding;
+    }
+    .pl#{$size} {
+      padding-left: $padding;
+    }
+    .pr#{$size} {
+      padding-right: $padding;
+    }
+    .pt#{$size} {
+      padding-top: $padding;
+    }
+    .pb#{$size} {
+      padding-bottom: $padding;
+    }
+    .px#{$size} {
+      padding-left: $padding;
+      padding-right: $padding;
+    }
+    .py#{$size} {
+      padding-top: $padding;
+      padding-bottom: $padding;
+    }
+  }
+}
+@include padding-classes;

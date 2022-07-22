@@ -1,2 +1,11 @@
-# iiht-proctoring-ui-components
-Frontend server -  IIHT proctoring common components 
+# `components`
+
+> TODO: description
+
+## Usage
+
+```
+const components = require('components');
+
+// TODO: DEMONSTRATE API
+```

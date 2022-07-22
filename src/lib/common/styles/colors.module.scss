@@ -1,0 +1,182 @@
+// need to work to export all the colors without any re-define again
+
+$color-white: #fff;
+$color-white-1: #ffe3e3;
+$color-white-2: #ebe5e5;
+$color-white-3: #f3f3f3;
+$color-white-4: #f0f0f0;
+
+$color-maroon: #d9534f;
+$color-maroon-1: #be4945;
+$color-maroon-2: #fccca7;
+
+$color-gray: #4c4c4c;
+$color-gray-1: #8d8d8d;
+$color-gray-2: #e0e0e0;
+$color-gray-3: #ffffff33;
+$color-gray-4: #bfbfbf;
+$color-gray-5: #c6c6c6;
+$color-gray-6: #dedede;
+$color-gray-7: #5c627c;
+$color-gray-8: #4f4d55;
+$color-gray-9: #bababa;
+$color-gray-10: #3c4252;
+$color-gray-11: #dbdada;
+$color-gray-12: #cccccc;
+$color-gray-13: #d9d9d9;
+$color-gray-14: #707070;
+$color-gray-15: #cccbc0;
+$color-gray-16: #304050;
+$color-gray-17: #00000050;
+$color-gray-18: #00000026;
+$color-gray-19: #bbbecc;
+$color-gray-20: #626b7f;
+$color-gray-21: #797c89;
+$color-gray-22: #b7c6d7;
+$color-gray-23: #00000073;
+$color-gray-24: #666;
+
+$color-blue: #0e1137;
+$color-blue-1: #0f61fd;
+$color-blue-2: #d8ebfd;
+$color-blue-3: #336699;
+$color-blue-4: #ebf5ff;
+$color-blue-5: #b6d4e8;
+$color-blue-6: #0074be;
+$color-blue-7: #bbbdc8;
+$color-blue-8: #0088fe;
+$color-blue-9: #386fbb;
+$color-blue-10: #8884d8;
+$color-blue-11: #87a5c2;
+$color-blue-12: #3b76bd;
+$color-blue-13: #95c2e1;
+$color-blue-16: #4e536c;
+$color-blue-17: #e5eef8;
+$color-blue-18: #7290b5;
+$color-blue-19: #1e4473;
+$color-blue-20: #0b5a81;
+$color-blue-21: #108ee9;
+$color-blue-22: #ecf6fd;
+$color-blue-23: #add8f7;
+$color-blue-24: #61dafb;
+$color-blue-26: #e4eef7;
+$color-blue-27: #039be5;
+$color-blue-28: #002d9b;
+$color-blue-29: #d1e3f0;
+$color-blue-31: #e6eff8;
+$color-blue-32: #cde4f2;
+$color-blue-33: #7f9fc6;
+$color-blue-34: #346de8;
+$color-blue-35: #449adf;
+$color-blue-36: #e8eff7;
+$color-blue-37: #b1e1f9;
+$color-blue-38: #6f8eb0;
+$color-blue-39: #d2edfa;
+$color-blue-40: #5ec2f4;
+$color-blue-41: #136896;
+$color-blue-42: #639ebc;
+
+$color-black-1: #161616;
+$color-black-2: #282c34;
+$color-black-4: #1d1e2f;
+$color-black-5: #000;
+$color-black-6: #67ac5a26;
+$color-black-7: #0000001a;
+$color-black-8: #2e323f;
+$color-black-9: #454c5d;
+$color-black-10: #353a48;
+$color-black-11: #434a5d;
+$color-black-12: #000000d9;
+
+$color-red: #f46561;
+$color-red-1: #ff0000;
+$color-red-3: #ef5d74;
+$color-red-4: #f44336;
+$color-red-5: #f8ebea;
+$color-red-6: #d1766f;
+
+$color-pink-1: #faf7f4;
+$color-pink-2: #c97898;
+$color-pink-3: #f4dae4;
+
+$color-green-1: #ebf8f2;
+$color-green-2: #a7e1c4;
+$color-green-3: #8cc759;
+$color-green-4: #4caf50;
+$color-green-5: #67ac5b;
+$color-green-6: #a6d7a8;
+$color-green-7: #e8f3e6;
+$color-green-8: #62bab3;
+$color-green-9: #8eb12e;
+$color-green-10: #d3efd4;
+$color-green-11: #689669;
+
+$color-yellow: #fcfbf9;
+$color-yellow-1: #fffaeb;
+$color-yellow-2: #ffe9a7;
+$color-yellow-4: #ffe58f;
+$color-yellow-5: #fffbe6;
+$color-yellow-6: #fbef5a;
+$color-yellow-7: #e2f7de;
+
+$color-orange-1: #fef3eb;
+$color-orange-3: #e15241;
+$color-orange-4: #ff9800;
+$color-orange-5: #fde8c8;
+$color-orange-6: #d89027;
+$color-orange-7: #b4876b;
+
+$color-purple-1: #8c6daf;
+
+// Export the color palette to make it accessible to JS
+:export {
+  colorwhite: $color-white;
+
+  colormaroon: $color-maroon;
+  colormaroon1: $color-maroon-1;
+
+  colorgray: $color-gray;
+  colorgray1: $color-gray-1;
+  colorgray2: $color-gray-2;
+  colorgray3: $color-gray-3;
+  colorgray4: $color-gray-4;
+  colorgray5: $color-gray-5;
+  colorgray6: $color-gray-6;
+  colorgray8: $color-gray-8;
+  colorgray12: $color-gray-12;
+  colorgray19: $color-gray-19;
+  colorgray22: $color-gray-22;
+  colorgray24: $color-gray-24;
+  colorBlue: $color-blue;
+  colorBlue1: $color-blue-1;
+  colorBlue2: $color-blue-2;
+  colorBlue3: $color-blue-3;
+  colorBlue4: $color-blue-4;
+  colorBlue5: $color-blue-5;
+  colorBlue6: $color-blue-6;
+  colorBlue7: $color-blue-7;
+  colorBlue8: $color-blue-8;
+  colorBlue9: $color-blue-9;
+  colorBlue10: $color-blue-10;
+  colorBlue11: $color-blue-11;
+  colorBlue12: $color-blue-12;
+  colorBlue13: $color-blue-13;
+  colorBlue27: $color-blue-27;
+  colorBlue29: $color-blue-29;
+  colorBlue32: $color-blue-32;
+  colorBlue33: $color-blue-33;
+  colorBlue34: $color-blue-34;
+  colorBlue35: $color-blue-35;
+  colorBlue36: $color-blue-36;
+  colorBlack1: $color-black-1;
+  colorgreen4: $color-green-4;
+  colorgreen8: $color-green-8;
+  colorgreen9: $color-green-9;
+  colorgreen10: $color-green-10;
+  colorred4: $color-red-4;
+  colororange4: $color-orange-4;
+  colorpink2: $color-pink-2;
+  colorpink3: $color-pink-3;
+  colorblack8: $color-black-8;
+  colororange7: $color-orange-7;
+}

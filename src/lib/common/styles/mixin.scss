@@ -1,0 +1,61 @@
+@mixin common-text($font, $line-height) {
+  font-size: $font;
+  line-height: $line-height;
+}
+// Headings
+@mixin heading-1($color: $white, $font-weight: bold) {
+  font-size: 3rem;
+  line-height: 1.17;
+  font-weight: $font-weight;
+  color: $color;
+}
+@mixin heading-2($color: $white, $font-weight: bold) {
+  font-size: 2.25m;
+  line-height: 1.17;
+  font-weight: $font-weight;
+  color: $color;
+}
+@mixin heading-3($color: $white, $font-weight: bold) {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  font-weight: $font-weight;
+  color: $color;
+}
+@mixin heading-4($color: $white, $font-weight: bold) {
+  font-size: 1.125rem;
+  line-height: 1.33;
+  font-weight: $font-weight;
+  color: $color;
+}
+@mixin heading-5($color: $white, $font-weight: bold) {
+  font-size: 0.875rem;
+  line-height: 1.43;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+// Body Text
+@mixin large-text($color: $white, $font-weight: normal) {
+  font-size: 1rem;
+  line-height: 1.38;
+  font-weight: $font-weight;
+  color: $color;
+}
+@mixin medium-text($color: $white, $font-weight: normal) {
+  font-size: 0.875rem;
+  line-height: 1.43;
+  font-weight: $font-weight;
+  color: $color;
+}
+@mixin mediumS-text($color: $white, $font-weight: normal) {
+  font-size: 0.8125rem;
+  line-height: 1.2;
+  font-weight: $font-weight;
+  color: $color;
+}
+@mixin small-text($color: $white, $font-weight: normal) {
+  font-size: 0.75rem;
+  line-height: 1.33;
+  font-weight: $font-weight;
+  color: $color;
+}

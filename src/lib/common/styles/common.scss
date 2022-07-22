@@ -1,0 +1,17 @@
+@import "./mixin.scss";
+p {
+  @include heading-2($color: red, $font-weight: "italic");
+}
+
+h1 {
+  @include heading-1($color: red, $font-weight: "italic");
+}
+
+.ant-slider-track {
+  background-color: green;
+}
+
+.ant-btn-primary {
+  border-color: orange;
+  color: red;
+}

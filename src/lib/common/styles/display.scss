@@ -1,0 +1,7 @@
+$options: ("block", "none", "flex", "inline", "inline-block");
+
+@each $disp in $options {
+  .display-#{$disp} {
+    display: #{$disp};
+  }
+}
