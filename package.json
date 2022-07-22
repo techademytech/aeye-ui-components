@@ -1,8 +1,8 @@
 {
-  "name": "new-comp",
+  "name": "iiht-proctoring-ui-components",
   "version": "1.0.0",
   "description": "Package contains all the isolated react components required in other packages",
-  "author": "IIHT",
+  "author": "Akshay Garje <akshay.garje@gslab.com>",
   "homepage": "",
   "license": "ISC",
   "main": "build/index.js",
