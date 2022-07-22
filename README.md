@@ -6,13 +6,7 @@ This repository is a IIHT proctoring common components
 ### Rendering library
 
 - [React](https://reactjs.org/)
-
-### State management
-
-- [React-redux](https://react-redux.js.org/)
-- [Redux](https://redux.js.org/)
-- [Redux-saga](https://github.com/redux-saga/redux-saga)
-
+- [Material UI](https://mui.com/)
 ### Code formatting and Code styling
 
 - [ESLint](https://eslint.org/)
