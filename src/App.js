@@ -41,7 +41,7 @@ import CircularProgress from "./lib/components/Progress/CircularProgress";
 import LinearProgress from "./lib/components/Progress/LinearProgress";
 import Menu from "./lib/components/Menu";
 import Breadcrumbs from "./lib/components/Breadcrumbs";
-import Link from "./lib/components/Breadcrumbs/Link";
+import Link from "./lib/components/Link";
 import Backdrop from "./lib/components/Backdrop";
 import MiniDrawer from "./MiniDrawer";
 import { red, blue, brown, green } from "@mui/material/colors";
