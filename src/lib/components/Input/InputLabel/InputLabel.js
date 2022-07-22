@@ -2,7 +2,7 @@ import React from "react";
 import MuiInputLabel from "@mui/material/InputLabel";
 
 function InputLabel(props) {
-  return <MuiInputLabel {...props}>{props.children}</MuiInputLabel>;
+  return <MuiInputLabel {...props}>{props?.children}</MuiInputLabel>;
 }
 
 export default InputLabel;

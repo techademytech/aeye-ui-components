@@ -2,5 +2,5 @@ import React from "react";
 import MuiSelect from "@mui/material/Select";
 
 export default function Select(props) {
-  return <MuiSelect {...props}>{props.children}</MuiSelect>;
+  return <MuiSelect {...props}>{props?.children}</MuiSelect>;
 }

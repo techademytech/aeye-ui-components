@@ -4,7 +4,7 @@ import MuiCircularProgressWithLabel from "@mui/material/CircularProgressWithLabe
 function CircularProgressWithLabel(props) {
   return (
     <MuiCircularProgressWithLabel {...props}>
-      {props.children}
+      {props?.children}
     </MuiCircularProgressWithLabel>
   );
 }
