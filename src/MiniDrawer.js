@@ -12,9 +12,14 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import Switch from "./lib/components/Switch";
+import FormGroup from "./lib/components/Form/FormGroup";
+import FormControlLabel from "./lib/components/Form/FormControlLabel";
 
-export default function MiniDrawer() {
+export default function MiniDrawer(props) {
   const [open, setOpen] = React.useState(false);
+  
+  const { theme } = props;
 
   const handleDrawer = () => {
     setOpen(!open);
@@ -27,6 +32,23 @@ export default function MiniDrawer() {
           {!open ? <ChevronRightIcon /> : <ChevronLeftIcon />}
         </IconButton>
       </DrawerHeader>
+      <Divider />
+      <List>
+        <ListItem>
+          <FormGroup>
+            <FormControlLabel
+              control={
+                <Switch
+                  checked={theme.t}
+                  onChange={() => theme.f(!theme.t)}
+                  name="gilad"
+                />
+              }
+              label="Theme"
+            />
+          </FormGroup>
+        </ListItem>
+      </List>
       <Divider />
       <List>
         {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
