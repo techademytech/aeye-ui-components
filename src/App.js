@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { styled } from "@mui/material/styles";
-import CssBaseline from './lib/components/CssBaseline';
+import CssBaseline from "./lib/components/CssBaseline";
 import Slider from "./lib/components/Slider";
 import VolumeDown from "@mui/icons-material/VolumeDown";
 import VolumeUp from "@mui/icons-material/VolumeUp";
@@ -60,7 +59,6 @@ import Backdrop from "./lib/components/Backdrop";
 import MiniDrawer from "./MiniDrawer";
 import StandardImageList from "./ImageList";
 import { red, blue, brown, green, indigo } from "@mui/material/colors";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
 import BasicRating from "./Rating";
 import ToggleButtonDemo from "./ToggleButtonDemo";
 import ListDemo from "./ListDemo";
@@ -71,7 +69,7 @@ import DialogDemo from "./DialogDemo";
 import SkeletonDemo from "./SkeletonDemo";
 import SnackbarDemo from "./SnackbarDemo";
 import PopperDemo from "./PopperDemo";
-import PopoverDemo from "./PopoverDemo"
+import PopoverDemo from "./PopoverDemo";
 import PortalDemo from "./PortalDemo";
 import BottomNavigationDemo from "./BottomNavigationDemo";
 import AppBarDemo from "./AppbarDemo";
@@ -81,7 +79,12 @@ import CollapseDemo from "./trasitions-demo/Collapse";
 import FadeDemo from "./trasitions-demo/Fade";
 import GrowDemo from "./trasitions-demo/Grow";
 import SlideDemo from "./trasitions-demo/Slide";
-import ZoomDemo from "./trasitions-demo/Zoom"
+import ZoomDemo from "./trasitions-demo/Zoom";
+import StyleDemo from "./StyleDemo";
+import Styles from "./lib/components/Styles";
+import OtherWrapperDemo from "./OtherWrapperDemo";
+
+const { createTheme, ThemeProvider, styled } = Styles();
 
 const themeRP = createTheme({
   palette: {
@@ -89,14 +92,14 @@ const themeRP = createTheme({
       light: "#4075EA",
       main: "#0a2972",
       dark: "#1146BC",
-      contrastText: "#fff"
+      contrastText: "#fff",
     },
     secondary: {
       light: "#75C3C0",
       main: "#077C78",
       mainGradient: "linear-gradient(to top,#fff700,#ffffff)",
       dark: "#077C78",
-      contrastText: "#fffff"
+      contrastText: "#fffff",
     },
     type: "dark",
   },
@@ -105,7 +108,7 @@ const themeRP = createTheme({
 const themeBB = createTheme({
   palette: {
     primary: { main: brown[500] },
-    secondary: { main: green['500'], mainGradient: "linear-gradient(to top, #ff8d00,#ffffff)" },
+    secondary: { main: green["500"], mainGradient: "linear-gradient(to top, #ff8d00,#ffffff)" },
     type: "dark1",
   },
 });
@@ -126,8 +129,7 @@ const columns = [
     description: "This column has a value getter and is not sortable.",
     sortable: false,
     width: 160,
-    valueGetter: (params) =>
-      `${params.row.firstName || ""} ${params.row.lastName || ""}`,
+    valueGetter: (params) => `${params.row.firstName || ""} ${params.row.lastName || ""}`,
   },
   {
     field: "Print",
@@ -196,13 +198,7 @@ function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
+    <div role="tabpanel" hidden={value !== index} id={`simple-tabpanel-${index}`} aria-labelledby={`simple-tab-${index}`} {...other}>
       {value === index && (
         <Box sx={{ p: 3 }}>
           <Typography>{children}</Typography>
@@ -243,11 +239,7 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-const steps = [
-  "Select campaign settings",
-  "Create an ad group",
-  "Create an ad",
-];
+const steps = ["Select campaign settings", "Create an ad group", "Create an ad"];
 
 function App(props) {
   const [age, setAge] = useState("");
@@ -267,7 +259,7 @@ function App(props) {
   const handleSliderChange = (event, newValue) => {
     console.log(newValue);
     setSliderValue(newValue);
-  }
+  };
 
   const handleMenuClose = () => {
     setAnchorEl(null);
@@ -320,47 +312,22 @@ function App(props) {
               <Button href="#text-buttons">Link</Button>
               <Divider sx={{ marginY: 2 }} />
               <FormGroup>
-                <FormControlLabel
-                  control={<Checkbox defaultChecked />}
-                  label="Label"
-                />
-                <FormControlLabel
-                  disabled
-                  control={<Checkbox />}
-                  label="Disabled"
-                />
+                <FormControlLabel control={<Checkbox defaultChecked />} label="Label" />
+                <FormControlLabel disabled control={<Checkbox />} label="Disabled" />
               </FormGroup>
               <Divider sx={{ marginY: 2 }} />
               <FormControl>
                 <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
                 <RadioGroup defaultValue="female" name="radio-buttons-group">
-                  <FormControlLabel
-                    value="female"
-                    control={<Radio />}
-                    label="Female"
-                  />
-                  <FormControlLabel
-                    value="male"
-                    control={<Radio />}
-                    label="Male"
-                  />
-                  <FormControlLabel
-                    value="other"
-                    control={<Radio />}
-                    label="Other"
-                  />
+                  <FormControlLabel value="female" control={<Radio />} label="Female" />
+                  <FormControlLabel value="male" control={<Radio />} label="Male" />
+                  <FormControlLabel value="other" control={<Radio />} label="Other" />
                 </RadioGroup>
               </FormControl>
               <Divider sx={{ marginY: 2 }} />
               <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">Age</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={age}
-                  label="Age"
-                  onChange={handleChange}
-                >
+                <Select labelId="demo-simple-select-label" id="demo-simple-select" value={age} label="Age" onChange={handleChange}>
                   <MenuItem value={10}>Ten</MenuItem>
                   <MenuItem value={20}>Twenty</MenuItem>
                   <MenuItem value={30}>Thirty</MenuItem>
@@ -368,18 +335,10 @@ function App(props) {
               </FormControl>
               <Divider sx={{ marginY: 2 }} />
               <FormGroup>
-                <FormControlLabel
-                  control={<Switch defaultChecked />}
-                  label="Switch Label"
-                />
+                <FormControlLabel control={<Switch defaultChecked />} label="Switch Label" />
               </FormGroup>
               <Divider sx={{ marginY: 2 }} />
-              <TextField
-                required
-                id="outlined-required"
-                label="Required"
-                defaultValue="Hello World"
-              />
+              <TextField required id="outlined-required" label="Required" defaultValue="Hello World" />
               <TextField
                 error
                 id="standard-error-helper-text"
@@ -413,20 +372,11 @@ function App(props) {
               <Divider />
               <Avatar>OP</Avatar>
               <Divider variant="middle" />
-              <StyledBadge
-                overlap="circular"
-                anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-                variant="dot"
-              >
+              <StyledBadge overlap="circular" anchorOrigin={{ vertical: "bottom", horizontal: "right" }} variant="dot">
                 <Avatar>MY</Avatar>
               </StyledBadge>
               <Divider sx={{ marginY: 2 }} />
-              <Chip
-                label="Clickable"
-                variant="outlined"
-                onClick={() => { }}
-                onDelete={() => { }}
-              />
+              <Chip label="Clickable" variant="outlined" onClick={() => {}} onDelete={() => {}} />
               <Divider sx={{ marginY: 2 }} />
               <div style={{ height: 400, width: "100%" }}>
                 <DataGrid
@@ -451,56 +401,39 @@ function App(props) {
               <Divider sx={{ marginY: 2 }} />
               <div>
                 <Accordion>
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
                     <Typography>Accordion 1</Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Suspendisse malesuada lacus ex, sit amet blandit leo
-                      lobortis eget.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+                      eget.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
                 <Accordion>
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel2a-content"
-                    id="panel2a-header"
-                  >
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2a-content" id="panel2a-header">
                     <Typography>Accordion 2</Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Suspendisse malesuada lacus ex, sit amet blandit leo
-                      lobortis eget.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+                      eget.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
                 <Accordion disabled>
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel3a-content"
-                    id="panel3a-header"
-                  >
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3a-content" id="panel3a-header">
                     <Typography>Disabled Accordion</Typography>
                   </AccordionSummary>
                 </Accordion>
               </div>
               <Divider sx={{ marginY: 2 }} />
               <span>
-                <Card
-                  style={{ width: 200, height: 300, margin: 20, padding: 20 }}
-                >
+                <Card style={{ width: 200, height: 300, margin: 20, padding: 20 }}>
                   <Box>
-                    Supplemental actions within the card are explicitly called out
-                    using icons, text, and UI controls, typically placed at the
-                    bottom of the card. Here's an example of a media control card.
+                    Supplemental actions within the card are explicitly called out using icons, text, and UI controls, typically placed at
+                    the bottom of the card. Here's an example of a media control card.
                   </Box>
                 </Card>
               </span>
@@ -534,23 +467,13 @@ function App(props) {
               <Divider sx={{ marginY: 2 }} />
               <div>
                 <Button onClick={handleOpen}>Open modal</Button>
-                <Modal
-                  open={open}
-                  onClose={handleClose}
-                  aria-labelledby="modal-modal-title"
-                  aria-describedby="modal-modal-description"
-                >
+                <Modal open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
                   <div style={style}>
-                    <Typography
-                      id="modal-modal-title"
-                      variant="h6"
-                      component="h2"
-                    >
+                    <Typography id="modal-modal-title" variant="h6" component="h2">
                       Text in a modal
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                      Text in a modalText in a modalText in a modalText in a
-                      modalText in a modal
+                      Text in a modalText in a modalText in a modalText in a modalText in a modal
                     </Typography>
                   </div>
                 </Modal>
@@ -606,11 +529,7 @@ function App(props) {
                 </Box>
               </div>
               <Divider sx={{ marginY: 2 }} />
-              <TextArea
-                aria-label="empty textarea"
-                placeholder="Empty"
-                style={{ width: 200 }}
-              ></TextArea>
+              <TextArea aria-label="empty textarea" placeholder="Empty" style={{ width: 200 }}></TextArea>
               <DatePicker
                 label="Basic example"
                 value={dateValue}
@@ -642,31 +561,49 @@ function App(props) {
                 </Backdrop>
               </div>
               <Divider sx={{ marginY: 2 }} />
-              <Grid container sx={{ backgroundColor: '#fff', p: 2 }} justifyContent="center">
+              <Grid container sx={{ backgroundColor: "#fff", p: 2 }} justifyContent="center">
                 <Grid item md={6} xs={12}>
-                  <Typography variant="subtitle1" component="h3"
+                  <Typography
+                    variant="subtitle1"
+                    component="h3"
                     sx={{
-                      color: (theme) => theme.palette.primary.main
+                      color: (theme) => theme.palette.primary.main,
                     }}
-                  > Image List </Typography>
+                  >
+                    {" "}
+                    Image List{" "}
+                  </Typography>
                   <StandardImageList />
                 </Grid>
                 <Grid item md={6} xs={12}>
-                  <Typography variant="subtitle1" component="h3"
+                  <Typography
+                    variant="subtitle1"
+                    component="h3"
                     sx={{
-                      color: (theme) => theme.palette.primary.main
+                      color: (theme) => theme.palette.primary.main,
                     }}
-                  > Grid Stack Paper </Typography>
+                  >
+                    {" "}
+                    Grid Stack Paper{" "}
+                  </Typography>
                   <Stack spacing={2} direction="row" mt={2}>
-                    <Paper elevation={3} sx={{ width: 150, height: 150 }}>Item 1</Paper>
-                    <Paper elevation={3} sx={{ width: 150, height: 150 }}>Item 2</Paper>
-                    <Paper elevation={3} sx={{ width: 150, height: 150 }}>Item 3</Paper>
+                    <Paper elevation={3} sx={{ width: 150, height: 150 }}>
+                      Item 1
+                    </Paper>
+                    <Paper elevation={3} sx={{ width: 150, height: 150 }}>
+                      Item 2
+                    </Paper>
+                    <Paper elevation={3} sx={{ width: 150, height: 150 }}>
+                      Item 3
+                    </Paper>
                   </Stack>
                 </Grid>
               </Grid>
               <Divider sx={{ marginY: 2 }} />
               <Box mt={2}>
-                <Typography mb={2} variant="subtitle2" color="primary">Button Group</Typography>
+                <Typography mb={2} variant="subtitle2" color="primary">
+                  Button Group
+                </Typography>
                 <ButtonGroup variant="contained" aria-label="outlined primary button group">
                   <Button>One</Button>
                   <Button>Two</Button>
@@ -675,7 +612,9 @@ function App(props) {
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
-                <Typography mb={2} variant="subtitle2" color="primary">Floating Action Buttons(Fab)</Typography>
+                <Typography mb={2} variant="subtitle2" color="primary">
+                  Floating Action Buttons(Fab)
+                </Typography>
                 <Fab color="primary" aria-label="add">
                   <AddIcon />
                 </Fab>
@@ -703,33 +642,51 @@ function App(props) {
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
-                <Typography variant="subtitle1" color="primary"> Toggle Button Demo </Typography>
+                <Typography variant="subtitle1" color="primary">
+                  {" "}
+                  Toggle Button Demo{" "}
+                </Typography>
                 <ToggleButtonDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
-                <Typography variant="subtitle1" color="primary"> No Server Side Renderning Demo  </Typography>
+                <Typography variant="subtitle1" color="primary">
+                  {" "}
+                  No Server Side Renderning Demo{" "}
+                </Typography>
                 <NoSsrDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
-                <Typography variant="subtitle1" color="primary"> Folder List  </Typography>
+                <Typography variant="subtitle1" color="primary">
+                  {" "}
+                  Folder List{" "}
+                </Typography>
                 <ListDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
-                <Typography variant="subtitle1" color="primary"> Basic Table </Typography>
+                <Typography variant="subtitle1" color="primary">
+                  {" "}
+                  Basic Table{" "}
+                </Typography>
                 <TableDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
-                <Typography variant="subtitle1" color="primary"> Typography Types </Typography>
+                <Typography variant="subtitle1" color="primary">
+                  {" "}
+                  Typography Types{" "}
+                </Typography>
                 <TypographyDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
-                <Typography variant="subtitle1" color="primary"> Basic alerts </Typography>
-                <Stack sx={{ width: '100%' }} spacing={2}>
+                <Typography variant="subtitle1" color="primary">
+                  {" "}
+                  Basic alerts{" "}
+                </Typography>
+                <Stack sx={{ width: "100%" }} spacing={2}>
                   <Alert severity="success">This is a success alert — check it out!</Alert>
                   <Alert severity="info">This is an info alert — check it out!</Alert>
                   <Alert severity="warning">This is a warning alert — check it out!</Alert>
@@ -738,37 +695,55 @@ function App(props) {
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
-                <Typography variant="subtitle1" color="primary"> Simple Dialog Demo </Typography>
+                <Typography variant="subtitle1" color="primary">
+                  {" "}
+                  Simple Dialog Demo{" "}
+                </Typography>
                 <DialogDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
-                <Typography variant="subtitle1" color="primary"> Skeleton Demo </Typography>
+                <Typography variant="subtitle1" color="primary">
+                  {" "}
+                  Skeleton Demo{" "}
+                </Typography>
                 <SkeletonDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
-                <Typography variant="subtitle1" color="primary"> Snackbar Demo </Typography>
+                <Typography variant="subtitle1" color="primary">
+                  {" "}
+                  Snackbar Demo{" "}
+                </Typography>
                 <SnackbarDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
-                <Typography variant="subtitle1" color="primary">SpeedDial Demo</Typography>
+                <Typography variant="subtitle1" color="primary">
+                  SpeedDial Demo
+                </Typography>
                 <SpeedDialDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
-                <Typography variant="subtitle1" color="primary"> Popper Demo </Typography>
+                <Typography variant="subtitle1" color="primary">
+                  {" "}
+                  Popper Demo{" "}
+                </Typography>
                 <PopperDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
-                <Typography variant="subtitle1" color="primary">Pop Over Demo</Typography>
+                <Typography variant="subtitle1" color="primary">
+                  Pop Over Demo
+                </Typography>
                 <PopoverDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
-                <Typography variant="subtitle1" color="primary">Portal Demo</Typography>
+                <Typography variant="subtitle1" color="primary">
+                  Portal Demo
+                </Typography>
                 <PortalDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
@@ -795,8 +770,24 @@ function App(props) {
               </Grid>
               <Divider sx={{ marginY: 2 }} />
               <Box>
-                <Typography variant="subtitle1" color="primary">Zoom</Typography>
+                <Typography variant="subtitle1" color="primary">
+                  Zoom
+                </Typography>
                 <ZoomDemo />
+              </Box>
+              <Divider sx={{ marginY: 2 }} />
+              <Box>
+                <Typography variant="subtitle1" color="primary">
+                  Styles Demo
+                </Typography>
+                <StyleDemo />
+              </Box>
+              <Divider sx={{ marginY: 2 }} />
+              <Box>
+                <Typography variant="subtitle1" color="primary">
+                  Other Wrapper Demos
+                </Typography>
+                <OtherWrapperDemo />
               </Box>
             </Box>
           </Box>
