@@ -570,8 +570,7 @@ function App(props) {
                       color: (theme) => theme.palette.primary.main,
                     }}
                   >
-                    {" "}
-                    Image List{" "}
+                    Image List
                   </Typography>
                   <StandardImageList />
                 </Grid>
@@ -583,8 +582,7 @@ function App(props) {
                       color: (theme) => theme.palette.primary.main,
                     }}
                   >
-                    {" "}
-                    Grid Stack Paper{" "}
+                    Grid Stack Paper
                   </Typography>
                   <Stack spacing={2} direction="row" mt={2}>
                     <Paper elevation={3} sx={{ width: 150, height: 150 }}>
@@ -643,48 +641,42 @@ function App(props) {
               <Divider sx={{ marginY: 2 }} />
               <Box>
                 <Typography variant="subtitle1" color="primary">
-                  {" "}
-                  Toggle Button Demo{" "}
+                  Toggle Button Demo
                 </Typography>
                 <ToggleButtonDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
                 <Typography variant="subtitle1" color="primary">
-                  {" "}
-                  No Server Side Renderning Demo{" "}
+                  No Server Side Renderning Demo
                 </Typography>
                 <NoSsrDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
                 <Typography variant="subtitle1" color="primary">
-                  {" "}
-                  Folder List{" "}
+                  Folder List
                 </Typography>
                 <ListDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
                 <Typography variant="subtitle1" color="primary">
-                  {" "}
-                  Basic Table{" "}
+                  Basic Table
                 </Typography>
                 <TableDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
                 <Typography variant="subtitle1" color="primary">
-                  {" "}
-                  Typography Types{" "}
+                  Typography Types
                 </Typography>
                 <TypographyDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
                 <Typography variant="subtitle1" color="primary">
-                  {" "}
-                  Basic alerts{" "}
+                  Basic alerts
                 </Typography>
                 <Stack sx={{ width: "100%" }} spacing={2}>
                   <Alert severity="success">This is a success alert — check it out!</Alert>
@@ -696,24 +688,21 @@ function App(props) {
               <Divider sx={{ marginY: 2 }} />
               <Box>
                 <Typography variant="subtitle1" color="primary">
-                  {" "}
-                  Simple Dialog Demo{" "}
+                  Simple Dialog Demo
                 </Typography>
                 <DialogDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
                 <Typography variant="subtitle1" color="primary">
-                  {" "}
-                  Skeleton Demo{" "}
+                  Skeleton Demo
                 </Typography>
                 <SkeletonDemo />
               </Box>
               <Divider sx={{ marginY: 2 }} />
               <Box>
                 <Typography variant="subtitle1" color="primary">
-                  {" "}
-                  Snackbar Demo{" "}
+                  Snackbar Demo
                 </Typography>
                 <SnackbarDemo />
               </Box>
@@ -727,8 +716,7 @@ function App(props) {
               <Divider sx={{ marginY: 2 }} />
               <Box>
                 <Typography variant="subtitle1" color="primary">
-                  {" "}
-                  Popper Demo{" "}
+                  Popper Demo
                 </Typography>
                 <PopperDemo />
               </Box>
