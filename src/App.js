@@ -81,11 +81,8 @@ import GrowDemo from "./trasitions-demo/Grow";
 import SlideDemo from "./trasitions-demo/Slide";
 import ZoomDemo from "./trasitions-demo/Zoom";
 import StyleDemo from "./StyleDemo";
-import Styles from "./lib/components/Styles";
+import { createTheme, ThemeProvider, styled } from "./lib/components/Styles";
 import OtherWrapperDemo from "./OtherWrapperDemo";
-
-const { createTheme, ThemeProvider, styled } = Styles();
-
 const themeRP = createTheme({
   palette: {
     primary: {

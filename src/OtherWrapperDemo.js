@@ -3,9 +3,13 @@ import PhotoCamera from "@mui/icons-material/PhotoCamera";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
-import { Typography, Box, Button, IconButton, Divider, InputAdornment, FormControl, Input, InputLabel } from "./lib/components";
+import { Typography, Box, Button, IconButton, Divider, InputAdornment, FormControl, Input, InputLabel, Styles } from "./lib/components";
 
 function OtherWrapperDemo() {
+  const theme = Styles.useTheme();
+
+  console.log("Main color code", theme.palette.primary.main);
+
   const [values, setValues] = React.useState({
     password: "",
     showPassword: false,

@@ -78,7 +78,7 @@ import Stack from "./Stack";
 import Stepper from "./Stepper";
 import Step from "./Stepper/Step";
 import StepLabel from "./Stepper/StepLabel";
-import Styles from "./Styles";
+import * as Styles from "./Styles";
 import Switch from "./Switch";
 import Table from "./Table";
 import TableBody from "./Table/TableBody";

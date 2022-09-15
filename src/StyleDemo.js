@@ -1,8 +1,6 @@
 import React from "react";
-import Styles from "./lib/components/Styles";
+import { useTheme } from "./lib/components/Styles";
 import Box from "./lib/components/Box";
-
-const { useTheme } = Styles(); /**return material styles object  */
 
 function StyleDemo() {
   const theme = useTheme();
