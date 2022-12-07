@@ -3,13 +3,22 @@ import PhotoCamera from "@mui/icons-material/PhotoCamera";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
-import { Typography, Box, Button, IconButton, Divider, InputAdornment, FormControl, Input, InputLabel, Styles } from "./lib/components";
+import {
+  Typography,
+  Box,
+  Button,
+  IconButton,
+  Divider,
+  InputAdornment,
+  FormControl,
+  Input,
+  InputLabel,
+  Styles,
+  TextField,
+} from "./lib/components";
 
 function OtherWrapperDemo() {
   const theme = Styles.useTheme();
-
-  console.log("Main color code", theme.palette.primary.main);
-
   const [values, setValues] = React.useState({
     password: "",
     showPassword: false,
@@ -17,6 +26,10 @@ function OtherWrapperDemo() {
 
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
+  };
+
+  const handleTextFiledChange = (event) => {
+    console.log(event.target.value);
   };
 
   const handleClickShowPassword = () => {
@@ -59,6 +72,24 @@ function OtherWrapperDemo() {
           }
         />
       </FormControl>
+      <Divider sx={{ marginY: 2 }} />
+      <Typography variant="subtitle1">Text Filed Demo</Typography>
+      <TextField
+        className="qa-custom-setting-candidate-name-field"
+        label="First Name"
+        variant="standard"
+        type="string"
+        helperText={false && t("enter.valid.name")}
+        sx={{
+          width: 1,
+          "& .MuiInputLabel-root.Mui-focused": {
+            color: theme.palette.text.secondary,
+          },
+          pb: 4,
+        }}
+        maxLength={4}
+        onChange={handleTextFiledChange}
+      />
     </Box>
   );
 }
