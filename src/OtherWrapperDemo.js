@@ -28,7 +28,7 @@ function OtherWrapperDemo() {
     setValues({ ...values, [prop]: event.target.value });
   };
 
-  const handleCh = (event) => {
+  const handleTextFiledChange = (event) => {
     console.log(event.target.value);
   };
 
@@ -88,7 +88,7 @@ function OtherWrapperDemo() {
           pb: 4,
         }}
         maxLength={4}
-        onChange={handleCh}
+        onChange={handleTextFiledChange}
       />
     </Box>
   );
