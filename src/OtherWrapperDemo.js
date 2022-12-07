@@ -19,9 +19,6 @@ import {
 
 function OtherWrapperDemo() {
   const theme = Styles.useTheme();
-
-  console.log("Main color code", theme.palette.primary.main);
-
   const [values, setValues] = React.useState({
     password: "",
     showPassword: false,
